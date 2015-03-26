@@ -39,7 +39,6 @@ public class PageModelExtractor {
 		fieldExtractors = new ArrayList<FieldExtractor>();
 		for (Field field : ClassUtils.getFieldsIncludeSuperClass(clazz)) {
 			field.setAccessible(true);
-			//System.out.println(field.getName()+field.toString());
 			FieldExtractor fieldExtractor = getAnnotationExtractBy(clazz, field);
 			if (fieldExtractor != null) {
 				checkFormat(field, fieldExtractor);

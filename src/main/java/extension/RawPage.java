@@ -26,8 +26,6 @@ public class RawPage {
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 
 	public void generatPage() {
-		System.out.println("************************************************");
-		System.out.println(url+html+id);
 		this.page = new Page();
 		if (StringUtils.isNotBlank(this.url)) {
 			if (this.html != null && this.html.length() > 0) {
